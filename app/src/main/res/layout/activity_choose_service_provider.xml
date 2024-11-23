@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseServiceProvider"
+    android:background="@color/grey">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topbar"
+        android:paddingTop="6dp"
+        android:paddingBottom="7dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/blue1"
+            android:text="Choose Service Provider"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_display">
+
+        </TextView>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topbar"
+        tools:listitem="@layout/choose_list_item"
+        android:layout_above="@id/bottombar"
+        android:dividerHeight="1.5dp"
+        android:divider="@color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noserviceman"
+        android:paddingLeft="50dp"
+        android:lineHeight="20dp"
+        android:paddingRight="50dp"
+        android:layout_below="@id/topbar"
+        android:textColor="@color/grey2"
+        android:text="Currently, No Service Provider available in your region. Please Try after Sometimes."
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_above="@id/bottombar">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottombar"
+        android:paddingBottom="12dp"
+        android:paddingTop="6dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/checkout"
+            android:layout_height="wrap_content"
+            android:text="Check_out"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_pro_display"
+            android:background="@drawable/background_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="20dp">
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>
